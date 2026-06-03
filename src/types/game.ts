@@ -17,4 +17,6 @@ export interface GuessResult {
    states: LetterState[];
 }
 
+export type KeyboardLetterStates = Record<string, LetterState>
+
 
