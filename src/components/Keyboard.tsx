@@ -1,4 +1,5 @@
 import { type KeyboardLetterStates } from "../types/game";
+import { Delete } from "lucide-react";
 
 interface KeyboardProps {
   onKeyPress: (key: string) => void;
@@ -31,7 +32,7 @@ export function Keyboard({ onKeyPress, letterStates }: KeyboardProps) {
                 onClick={() => onKeyPress(key)}
                 className={`rounded px-3 py-4 font-semibold transition-colors ${state ? stateStyles[state] : "bg-zinc-700 hover:bg-zinc-600"}`}
               >
-                {key}
+                {key === "BACKSPACE" ? (<Delete size={20}/>) : (key)}
               </button>
             );
           })}
