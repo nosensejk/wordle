@@ -1,4 +1,4 @@
-import { ANSWERS } from "../data/answers"
+import { ANSWERS } from "../data/words"
 
 export function getRandomAnswer () {
    const randomIndex = Math.floor(
